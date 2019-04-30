@@ -36,3 +36,8 @@ const interval = setInterval(function() {
     }
 
 }, 1000);
+
+//  Hide Preloader
+window.addEventListener('load', function() {
+    document.querySelector('.preloader-overlay').style.display = 'none';
+})
