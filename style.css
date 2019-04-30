@@ -14,6 +14,9 @@ body {
     margin: 0;
     color: var(--black);
 }
+/*
+    SECTION
+*/
 section h1 {
     font-size: 4rem;
     text-align: center;
@@ -30,6 +33,7 @@ section h3 {
 }
 .background {
     background-image: url(img/cover.png);
+    /* clip-path: polygon(0 4.5%, 100% 0, 100% 95%, 0% 100%); */
     background-size: cover;
     height: 100vh;
 }
@@ -65,6 +69,29 @@ section h3 {
     color: var(--cyan);
 }
 /*
+    FOOTER
+*/
+footer {
+    color: #ccc; /* light gray */
+    padding-top: 2em;
+    text-align: center;
+    position: fixed;
+    bottom:0;
+    left: 0;
+    width: 100%;
+}
+footer a .fa {
+    font-size: 1.75rem;
+    color: #999; /* dark gray */
+    margin: 0 2.5px; 
+}
+footer a .fa:hover {
+    color: white; 
+}
+footer p {
+    font-size: 0.9rem; 
+}
+/*
     MEDIA QUERIES
 */
 @media (max-width: 600px) {
@@ -92,3 +119,4 @@ section h3 {
         display: none;
     }
 }
+  
