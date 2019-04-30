@@ -1,10 +1,76 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
-
-* {
-    font-family: Lato, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+html {
+  box-sizing: border-box;
+  --white: #fff;
+  --black: #323B3C;
+  --black-light: #516163;
+  --cyan: #63B2BB;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin: 0;
+    color: var(--black);
 }
 h1 {
-    text-align: center;
-    color: lightcoral;
     font-size: 4rem;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    background-color: yellow;
+}
+h3 {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: lowercase;
+    margin-top: -0.5em;
+}
+.countdown {
+    font-size: 4rem;
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.countdown > div {
+    border: 1px dotted black;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border-color: var(--black);
+    color: var(--black-light);
+}
+.countdown .sub {
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--cyan);
+}
+/*
+    MEDIA QUERIES
+*/
+@media (max-width: 600px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    .countdown {
+        font-size: 3rem;
+        width: 100%;
+    }
+}
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .countdown {
+        flex-direction: column;
+        width: 30%;
+        text-align: center;
+    }
+    .countdown div:not(:first-child) {
+        display: none;
+    }
 }
