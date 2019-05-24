@@ -1,5 +1,5 @@
 const element = document.querySelector('.countdown');
-const launchDate = new Date('Jun 01, 2019 09:00:00');
+const launchDate = new Date('July 01, 2019 09:00:00');
 
 // Launch Date (ms)
 const end = launchDate.getTime();
@@ -38,6 +38,10 @@ const interval = setInterval(function() {
 }, 1000);
 
 //  Hide Preloader
-window.addEventListener('load', function() {
+// window.addEventListener('load', function() {
+//     document.querySelector('.preloader-overlay').style.display = 'none';
+// })
+
+setTimeout(function() {
     document.querySelector('.preloader-overlay').style.display = 'none';
-})
+}, 1000)
