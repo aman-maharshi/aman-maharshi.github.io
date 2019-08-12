@@ -1,3 +1,7 @@
+:root {
+    --black: #161819;
+    --cyan: #8EF2FF;
+}
 html, body {
     height: 100%;
     width: 100%;
@@ -23,13 +27,13 @@ a {
     color: white;
 }
 a:hover {
-    color: #8EF2FF;
+    color: var(--cyan);
 }
 /*
     NAV BAR
 ------------------*/
 .navbar {
-    background-color: #161819;
+    background-color: var(--black);
     padding: .5em;
     color: white;
     position: fixed;
@@ -75,12 +79,12 @@ a:hover {
 .welcome__title {
     font-size: 4rem;
     margin: 0;
-    text-shadow: 1px 1px #8EF2FF;
+    text-shadow: 1px 1px var(--cyan);
 }
 .welcome__subtitle {
     font-size: 1.5rem;
     margin: 0;
-    text-shadow: 1px 1px #8EF2FF;
+    text-shadow: 1px 1px var(--cyan);
 }
 @media (max-width: 768px) {
     .welcome__title {
@@ -214,14 +218,14 @@ a:hover {
 }
 .projects__link a {
     font-weight: 600;
-    color: #161819;
-    border: 2px solid #161819;
+    color: var(--black);
+    border: 2px solid var(--black);
     padding: 5px 10px;
     border-radius: 25px;
 }
 .projects__link a:hover {
-    color: #8EF2FF;
-    background-color: #161819;
+    color: var(--cyan);
+    background-color: var(--black);
 }
 .projects__link-icon {
     margin-right: 10px;
@@ -231,7 +235,7 @@ a:hover {
 ------------------*/
 .footer {
     padding: .5rem 0;
-    background-color: #161819;
+    background-color: var(--black);
     display: flex;
     justify-content: center;
 }
@@ -250,7 +254,7 @@ a:hover {
     width: 100%;
     overflow: hidden;
     z-index: 2; /* navbar has z-index: 1*/
-    background-color: #161819;
+    background-color: var(--black);
     position: fixed; /* removing this div out of DOM */
     display: flex;
     justify-content: center;
@@ -261,7 +265,7 @@ a:hover {
     height: 6rem;
     width: 6rem;
     border: 2px solid #f3f3f3;
-    border-top: 5px solid #8EF2FF;
+    border-top: 5px solid var(--cyan);
     border-radius: 50%;
     animation: spin 1.25s infinite linear;
 }
