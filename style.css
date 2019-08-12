@@ -63,11 +63,10 @@ a:hover {
     WELCOME SECTION
 -----------------------*/
 .welcome {
+    height: 100vh;
     background-color: rgba(0,0,0,0.85);
     background-image: url(./images/header-bg.jpg);
     background-size: cover;
-    height: 100vh;
-
     color: white;
     display: flex;
     flex-direction: column;
@@ -79,12 +78,12 @@ a:hover {
 .welcome__title {
     font-size: 4rem;
     margin: 0;
-    text-shadow: 1px 1px var(--cyan);
+    text-shadow: 1.25px 1.25px var(--cyan);
 }
 .welcome__subtitle {
     font-size: 1.5rem;
     margin: 0;
-    text-shadow: 1px 1px var(--cyan);
+    text-shadow: 1.25px 1.25px var(--cyan);
 }
 @media (max-width: 768px) {
     .welcome__title {
@@ -110,7 +109,7 @@ a:hover {
     SKILLS SECTION
 ----------------------*/
 .skills {
-    padding: 3rem 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,6 +139,9 @@ a:hover {
     margin-top: 15px;
 }
 @media (max-width: 576px) {
+    .skills {
+        padding: 1rem;
+    }
     .skills__innerbox {
         flex-wrap: wrap;
         padding: 5px;
@@ -161,7 +163,7 @@ a:hover {
     PROJECTS SECTION
 -----------------------*/
 .projects {
-    padding: 6rem 0;
+    min-height: 100vh;
 }
 .projects__title {
     font-size: 3rem;
@@ -203,7 +205,6 @@ a:hover {
     font-weight: 600;
 }
 .projects__desc {
-    /* text-align: center; */
     min-height: 110px;
 }
 @media (max-width: 576px) {
