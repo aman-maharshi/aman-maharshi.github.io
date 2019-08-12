@@ -33,7 +33,7 @@ a:hover {
     padding: .5em;
     color: white;
     position: fixed;
-    z-index: 100;
+    z-index: 1;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -241,4 +241,35 @@ a:hover {
 .footer__listitem {
     font-size: 1.5rem;
     margin-right: 1rem;
+}
+/*
+    PRELOADER
+--------------------*/
+.preloader-overlay {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2; /* navbar has z-index: 1*/
+    background-color: #161819;
+    position: fixed; /* removing this div out of DOM */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.spinner {
+    height: 6rem;
+    width: 6rem;
+    border: 2px solid #f3f3f3;
+    border-top: 5px solid #8EF2FF;
+    border-radius: 50%;
+    animation: spin 1.25s infinite linear;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
