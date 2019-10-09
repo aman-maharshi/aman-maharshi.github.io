@@ -1,0 +1,326 @@
+:root {
+    --black: #161819;
+    --cyan: #8EF2FF;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s ease;
+    color: white;
+}
+a:hover {
+    color: var(--cyan);
+}
+/*
+    NAV BAR
+------------------*/
+.navbar {
+    background-color: var(--black);
+    /* padding: .5em; */
+    color: white;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.navbar__list {
+    display: flex;
+}
+.navbar__list-item {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .navbar__list-item  {
+        padding: 5px 10px;
+    }
+    .navbar__list-item a {
+        font-size: 1rem;
+    }
+}
+/*
+    WELCOME SECTION
+-----------------------*/
+.welcome {
+    height: 100vh;
+    background-color: rgba(0,0,0,0.85);
+    background-image: url(../images/header-bg.jpg);
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+}
+.welcome__title {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 1.25px 1.25px var(--cyan);
+}
+.welcome__subtitle {
+    font-size: 1.5rem;
+    margin: 0;
+    text-shadow: 1.25px 1.25px var(--cyan);
+}
+@media (max-width: 768px) {
+    .welcome__title {
+        font-size: 3rem;
+        text-shadow: none;
+    }
+    .welcome__subtitle {
+        font-size: 1.2rem;
+        text-shadow: none;
+    }
+}
+@media (max-width: 576px) {
+  .welcome__title {
+      font-size: 2rem;
+      margin-left: .5rem;
+      line-height: 1.1;
+  }
+  .welcome__subtitle {
+      margin-left: .5rem;
+  }
+}
+/*
+    ABOUT SECTION
+----------------------*/
+.about {
+    display: flex;
+    justify-content: center;
+}
+.about__container {
+    max-width: 1200px;
+    display: flex;
+    margin: 6rem 0 2rem 0;
+}
+@media (max-width: 768px) {
+    .about__container {
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+}
+.about__desc {
+    flex: 3;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5rem;
+    line-height: 1.6;
+}
+.about__photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.about__photo img {
+    border-radius: 50%;
+    width: 80%;
+}
+@media (max-width: 768px) {
+    .about__desc {
+        order: 2;
+        font-size: 1.4rem;
+        padding-top: 1rem;
+    }
+    .about__photo {
+        order: 1;
+    }
+    .about__photo img {
+        width: 50%;
+    }
+}
+/*
+    SKILLS SECTION
+----------------------*/
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 3%;
+}
+.skills__title {
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+}
+.skills__innerbox {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.skills__icon {
+    font-size: 4rem;
+    transition: .4s ease;
+}
+.skills__icon:not(:last-child) {
+    margin-right: 4rem;
+}
+.skills__icon:hover {
+    transform: scale(1.2) !important;
+}
+.skills__icon__c {
+    margin-top: 15px;
+}
+@media (max-width: 576px) {
+    .skills__innerbox {
+        flex-wrap: wrap;
+        padding: 5px;
+    }
+    .skills__title {
+        font-size: 1.6rem;
+    }
+    .skills__icon {
+        font-size: 3.5rem;
+    }
+    .skills__icon__c {
+        margin-top: 10px;
+    }
+    .skills__icon:not(:last-child) {
+        margin-right: 1rem;
+    }
+}
+/*
+    PROJECTS SECTION
+-----------------------*/
+.projects {
+    min-height: 100vh;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);   
+    padding: 7rem 0;
+}
+.projects__title {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.projects__outerbox {
+    display: flex;
+    margin: 0 4rem;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+}
+.projects__tile {
+    padding: 0 .5rem;
+    max-width: 320px;   
+}
+@media (max-width: 768px) {
+    .projects__outerbox {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    .projects__tile {
+        margin-bottom: 2rem;
+    }
+}
+.projects__image {
+    /* width: 100%; */
+    border: 1px solid gray;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.projects__name {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: .5rem 0;
+    font-weight: 600;
+}
+.projects__desc {
+    min-height: 110px;
+}
+@media (max-width: 576px) {
+    .projects__desc {
+        text-align: center;
+    }
+}
+.projects__link {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.projects__link a {
+    font-weight: 600;
+    color: var(--black);
+    border: 2px solid var(--black);
+    padding: 5px 10px;
+    border-radius: 25px;
+}
+.projects__link a:hover {
+    color: var(--cyan);
+    background-color: var(--black);
+}
+.projects__link-icon {
+    margin-right: 10px;
+}
+/*
+    FOOTER
+------------------*/
+.footer {
+    padding: .5rem 0;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+}
+.footer__list {
+    display: flex;
+}
+.footer__listitem {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+/*
+    PRELOADER
+--------------------*/
+.preloader-overlay {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2; /* navbar has z-index: 1*/
+    background-color: var(--black);
+    position: fixed; /* removing this div out of DOM */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.spinner {
+    height: 6rem;
+    width: 6rem;
+    border: 2px solid #f3f3f3;
+    border-top: 5px solid var(--cyan);
+    border-radius: 50%;
+    animation: spin 1.25s infinite linear;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

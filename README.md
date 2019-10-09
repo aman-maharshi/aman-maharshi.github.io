@@ -2,5 +2,7 @@
 # [Personal Website](https://aman-maharshi.github.io/)
 
 
-## Updates / Versions
+## Updates / Revisions
 ### [Version 1](https://aman-maharshi.github.io/v1)
+### [Version 2](https://aman-maharshi.github.io/v2)
+### [Version 3](https://aman-maharshi.github.io/v3)
