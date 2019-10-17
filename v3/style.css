@@ -365,13 +365,45 @@ a {
     FOOTER
 ------------------*/
 .footer {
-    padding: .5rem 0;
+    padding: 1.5rem 0;
     background-color: var(--black);
     display: flex;
-    justify-content: center;
+    color: white;
+}
+.emailme {
+  flex: 3;
+  display: flex;
+  align-items: left;
+  padding: 1.5rem;
+  margin-left: 1rem;
+}
+.emailme__text {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.emailme__btn {
+  margin-left: 1.5rem;
+  position: relative;
+  top: -10px;
+}
+.emailme__btn a {
+  display: block;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 3px;
+  transition: all 0.5s;
+  color: white
+}
+.emailme__btn a:hover {
+  background: white;
+  color: var(--black);
 }
 .footer__list {
     display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
 }
 .footer__list a {
     transition: all 0.4s ease;
@@ -382,6 +414,30 @@ a {
 .footer__listitem {
     font-size: 1.5rem;
     margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+      flex-direction: column;
+      padding: 1rem 0;
+  }
+  .emailme {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 576px) {
+  .emailme__text {
+    font-size: 1.1rem;
+  }
+  .emailme__btn {
+    margin-top: 0;
+  }
+  .emailme__btn a {
+    font-size: 1rem;
+    text-align: center;
+    padding: 5px 15px;
+  }
 }
 
 /*
