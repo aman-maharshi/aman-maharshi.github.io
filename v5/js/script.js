@@ -22,6 +22,7 @@ window.addEventListener('scroll', () => {
     }
 })
 
+
 /*
     Typing Effect in the Header
 ---------------------------------*/
@@ -71,13 +72,37 @@ function erase() {
     }
 }
 
-
 // Hiding Preloader and Calling the Typing function
 window.addEventListener('load', () => {
     document.querySelector('.preloader-overlay').style.display = 'none';
     if(textArray.length) {
         setTimeout(type, newTextDelay + 250);
     }
-});
+})
+
+
+/*
+    Scroll slide up effect in the Projects Section
+-----------------------------------------------------*/
+
+let projects = document.querySelectorAll('.projects__tile');
+projects.forEach(item => {
+    item.classList.add('reveal-item');
+})
+document.addEventListener('scroll', () => {
+    projects.forEach(item => {
+        let divPosition = item.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight;
+
+        if (divPosition < screenPosition) {
+            item.classList.add('reveal-item--is-visible');
+        }
+        else {
+            item.classList.remove('reveal-item--is-visible');
+        }
+    })
+})
+
+
 
 
