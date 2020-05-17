@@ -94,7 +94,9 @@ document.addEventListener('scroll', () => {
         let divPosition = item.getBoundingClientRect().top;
         let screenPosition = window.innerHeight;
 
-        if (divPosition < screenPosition) {
+        scrollPercentage = divPosition / screenPosition * 100;
+
+        if (scrollPercentage < 85) {
             item.classList.add('reveal-item--is-visible');
         }
         else {
