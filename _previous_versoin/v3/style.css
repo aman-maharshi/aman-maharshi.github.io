@@ -1,15 +1,16 @@
 :root {
     --black: #161819;
-    --cyan: #8EF2FF;
+    --cyan: #8ef2ff;
 }
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     /* overflow-x: hidden; */
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -23,7 +24,7 @@ ul {
 a {
     text-decoration: none;
     cursor: pointer;
-    transition: .3s ease;
+    transition: 0.3s ease;
     color: white;
 }
 
@@ -56,7 +57,7 @@ a {
     padding: 10px 5px;
     position: relative;
 }
-.navbar__list-item a, 
+.navbar__list-item a,
 .navbar__list-item a::after,
 .navbar__list-item a::before {
     transition: all 0.4s;
@@ -65,7 +66,7 @@ a {
     color: var(--black);
 }
 .navbar__list-item a:after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -80,7 +81,7 @@ a {
 }
 
 @media (max-width: 768px) {
-    .navbar__list-item  {
+    .navbar__list-item {
         padding: 5px 10px;
     }
     .navbar__list-item a {
@@ -88,12 +89,12 @@ a {
     }
 }
 @keyframes slide-down {
-   0% {
-       transform: translateY(-100%);
-   }
-   100% {
-       transform: translateY(0);
-   }
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /*
@@ -102,7 +103,7 @@ a {
 .welcome {
     height: 100vh;
     background-color: #e6e5ea;
-    background-image: url(../images/header-bg1.jpg);
+    background-image: url(images/header-bg1.jpg);
     background-size: cover;
     color: var(--black);
     display: flex;
@@ -125,9 +126,10 @@ a {
     text-shadow: 1.25px 1.25px var(--cyan);
     text-align: center;
 }
-.welcome__title,.welcome__subtitle {
-    animation: slide-up .4s ease-in forwards;
-    animation-delay: .8s; /* start after nav animation finishes*/
+.welcome__title,
+.welcome__subtitle {
+    animation: slide-up 0.4s ease-in forwards;
+    animation-delay: 0.8s; /* start after nav animation finishes*/
     opacity: 0;
 }
 
@@ -144,11 +146,11 @@ a {
 @media (max-width: 576px) {
     .welcome__title {
         font-size: 2.5rem;
-        margin-left: .5rem;
+        margin-left: 0.5rem;
         line-height: 1.1;
     }
     .welcome__subtitle {
-        margin-left: .5rem;
+        margin-left: 0.5rem;
     }
 }
 @keyframes slide-up {
@@ -237,7 +239,7 @@ a {
 }
 .skills__icon {
     font-size: 4rem;
-    transition: .4s ease;
+    transition: 0.4s ease;
 }
 .skills__icon:not(:last-child) {
     margin-right: 4rem;
@@ -253,7 +255,7 @@ a {
     .skills__icon:not(:last-child) {
         margin-right: 2rem;
     }
-} 
+}
 @media (max-width: 768px) {
     .skills__innerbox {
         flex-wrap: wrap;
@@ -278,7 +280,7 @@ a {
 -----------------------*/
 .projects {
     min-height: 100vh;
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);   
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     padding: 7rem 0;
 }
 .projects__title {
@@ -294,8 +296,8 @@ a {
     /* flex-wrap: wrap; */
 }
 .projects__tile {
-    padding: 0 .5rem;
-    max-width: 320px;   
+    padding: 0 0.5rem;
+    max-width: 320px;
 }
 .projects__image {
     border: 1px solid gray;
@@ -304,12 +306,12 @@ a {
     transition: 0.3s all ease;
 }
 .projects__image:hover {
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 .projects__name {
     text-align: center;
     font-size: 1.5rem;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
     font-weight: 600;
 }
 .projects__desc {
@@ -328,7 +330,7 @@ a {
     border: 2px solid var(--black);
     padding: 5px 10px;
     border-radius: 25px;
-    transition: all .5s;
+    transition: all 0.5s;
 }
 .projects__link a:hover {
     color: var(--cyan);
@@ -365,7 +367,7 @@ a {
     FOOTER
 ------------------*/
 .footer {
-    padding: .5rem 0;
+    padding: 0.5rem 0;
     background-color: var(--black);
     display: flex;
     justify-content: center;
@@ -397,7 +399,6 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .spinner {
     height: 6rem;
