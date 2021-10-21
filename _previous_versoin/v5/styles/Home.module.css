@@ -13,6 +13,21 @@
 ---------------*/
 .mainSocial {
     flex: 1;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 2rem;
+}
+.iconGroup {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -2rem;
+}
+
+.socialIcon {
+    height: 30px;
+    width: 30px;
+    margin: 10px 0;
 }
 
 /*
@@ -40,7 +55,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 .imageWrapper {
     width: 275px;
@@ -57,12 +72,15 @@
     height: 100%;
 }
 
-.rowTwo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .rowTwoContent {
-    max-width: 770px;
+    max-width: 720px;
+    margin: 0 auto;
     line-height: 1.5;
+}
+.technologies {
+    display: flex;
+}
+.technologies ul {
+    margin-right: 3rem;
+    padding-left: 18px;
 }

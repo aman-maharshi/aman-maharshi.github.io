@@ -3,8 +3,12 @@
 body {
     margin: 0;
     font-family: "Rubik", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 * {
     box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
 }

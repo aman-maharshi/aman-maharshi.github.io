@@ -15,6 +15,8 @@ const HomePage = () => {
                 <meta name="keywords" content="aman maharshi, aman, maharshi, portfolio, front end developer, font end engineer, web designer, ui developer, programmer, india" />
 
                 <link rel="icon" href="/favicon.ico" />
+
+                <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
             </Head>
 
             <Home />
